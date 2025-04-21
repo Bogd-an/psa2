@@ -1,0 +1,85 @@
+\documentclass[a4paper]{article}
+\usepackage{listings}
+\input{makros}
+
+\begin{document}
+    \makrosLab{5}{п}{Побудова блок-схем алгоритмів}
+\section*{Тема роботи}
+Побудова блок-схем алгоритмів
+
+\section*{Мета роботи}
+Навчитись розробляти блок-схеми алгоритмів згідно ДСТУ.
+
+\section*{Завдання}
+Варіант 15
+
+Скласти блок-схему алгоритму обчислення значень змінної згідно варіанту
+
+
+
+\section*{Алгоритм розрахунку функції $Y$}
+
+\[
+Y = 
+\begin{cases}
+\dfrac{\sin^2 \gamma - x^2}{\cos y + \sqrt{x^3 + 1}}, & \text{якщо } x \leq 0 \\
+x = \gamma^2 + a^2, & \text{якщо } x > 0
+\end{cases}
+\]
+
+\noindent
+де: 
+\begin{align*}
+    a &= 10, \\
+    \gamma &= 0{,}35 \cdot a.
+\end{align*}
+
+\section*{Алгоритм}
+
+\begin{enumerate}
+    \item Присвоїти значення: $a := 10$
+    \item Обчислити: $\gamma := 0{,}35 \cdot a$
+    \item Ввести значення $x$
+    \item \textbf{Якщо} $x \leq 0$, тоді:
+    \begin{enumerate}
+        \item Ввести значення $y$
+        \item Обчислити чисельник: $\sin^2(\gamma) - x^2$
+        \item Обчислити знаменник: $\cos(y) + \sqrt{x^3 + 1}$
+\newpage
+        \item Обчислити $Y = \dfrac{\sin^2(\gamma) - x^2}{\cos(y) + \sqrt{x^3 + 1}}$
+        \item Вивести значення $Y$
+    \end{enumerate}
+    \item \textbf{Інакше} (тобто якщо $x > 0$):
+    \begin{enumerate}
+        \item Обчислити $x = \gamma^2 + a^2$
+        \item Вивести значення $x$
+    \end{enumerate}
+\end{enumerate}
+
+% ```mermaid
+% graph TD;
+%     A(Початок) --> B{Чи задано x?};
+%     B -- Так --> C[Отримати x];
+%     B -- Ні --> D[Обчислити x = 1.7 - e^0.35];
+%     C --> E{Яке значення x?};
+%     D --> E;
+%     E -- x ≤ 1 --> F[Y = 0.5 cos(x) + 4x];
+%     E -- x < 0 --> G[Y = 0.25x^4 + 2x^2];
+%     E -- x > 1 --> H[Y = 0.9√x - 0.8x];
+%     F --> I(Вивести Y);
+%     G --> I;
+%     H --> I;
+%     I --> J(Кінець);
+% ```
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imgs/PW5.drawio.png}
+    \caption*{Рис: 5.1 Блок-схема алгоритму рівняння}
+\end{figure}
+
+\section*{Висновок}
+У ході виконання практичної роботи я навчився  розробляти блок-схеми алгоритмів згідно ДСТУ.
+
+
+\end{document}
